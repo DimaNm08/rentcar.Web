@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace rentcar.Web.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         UserRepository repository = null;
@@ -18,7 +19,6 @@ namespace rentcar.Web.Controllers
             repository = new UserRepository();
         }
         // GET: Admin
-        [Authorize(Roles ="Admin")]
         public ActionResult Index()
         {
             return View();
@@ -46,7 +46,6 @@ namespace rentcar.Web.Controllers
             }
             return View();
         }
-
         [HttpGet]
         public ActionResult Delete(int id)
         {

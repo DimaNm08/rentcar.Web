@@ -7,6 +7,7 @@ using System.Linq;
 using rentcar.BusinessLogic;
 using rentcar.DataAccess;
 using rentcar.BusinessObjects;
+using static Microsoft.ApplicationInsights.MetricDimensionNames.TelemetryContext;
 
 namespace rentcar.Web.Controllers
 {
